@@ -1,24 +1,12 @@
-import tkinter as tk
-from tkinter import messagebox
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
-# Create the main window
-root = tk.Tk()
-root.title("Simple GUI")
+root = ttk.Window()
 
-# Get the screen width and height
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
+b1 = ttk.Button(root, text="Button 1", bootstyle=SUCCESS)
+b1.pack(side=LEFT, padx=5, pady=10)
 
-# Set the window to fit the screen
-root.geometry(f"{screen_width}x{screen_height}")
+b2 = ttk.Button(root, text="Button 2", bootstyle=(INFO, OUTLINE))
+b2.pack(side=LEFT, padx=5, pady=10)
 
-# Button click event
-def on_button_click():
-    messagebox.showinfo("Information", "Button was clicked!")
-
-# Create and place a button
-button = tk.Button(root, text="Click Me!", command=on_button_click)
-button.pack(pady=50)
-
-# Run the application
 root.mainloop()
