@@ -4,7 +4,13 @@ from tkinter import messagebox
 # Create the main window
 root = tk.Tk()
 root.title("Simple GUI")
-root.geometry("300x200")  # Width x Height
+
+# Get the screen width and height
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+# Set the window to fit the screen
+root.geometry(f"{screen_width}x{screen_height}")
 
 # Button click event
 def on_button_click():
