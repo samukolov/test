@@ -52,7 +52,7 @@ def button_clicked(button_name):
     print(f"{button_name} button clicked")
 
 # Start the Eel application
-# eel.start('index.html', mode='chrome', cmdline_args=['--kiosk'])
+eel.start('index.html', mode='chrome', cmdline_args=['--kiosk'])
 # eel.start('index.html', cmdline_args=['--start-fullscreen'])
 # eel.start('index.html')
-eel.start('index.html', size=(1280, 720))
+# eel.start('index.html', size=(1280, 720))
